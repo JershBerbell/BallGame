@@ -65,5 +65,14 @@ namespace UnityStandardAssets.Vehicles.Ball
             ball.Move(move, jump);
             jump = false;
         }
+
+		void OnTriggerEnter(Collider other) 
+		{
+			if (other.gameObject.CompareTag ("Pick Up"))
+			{
+				other.gameObject.SetActive (false);
+				rigidbody.AddTorque (Vector3(0, 0, 30));
+			}
+		}
     }
 }
