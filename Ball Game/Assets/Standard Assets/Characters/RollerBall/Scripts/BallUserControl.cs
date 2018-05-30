@@ -66,6 +66,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             jump = false;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 		void OnTriggerEnter(Collider other) 
@@ -76,5 +77,7 @@ namespace UnityStandardAssets.Vehicles.Ball
 			}
 		}
 >>>>>>> parent of f809fe6... Cherry
+=======
+>>>>>>> parent of 49ae00f... Cherry
     }
 }
