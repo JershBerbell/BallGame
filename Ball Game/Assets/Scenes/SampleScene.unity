@@ -132,9 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a53677a5c881946af012970ab99a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypoints: []
-  speed: 2
-  CurrentPoint: 0
 --- !u!64 &35892966
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1368,9 +1365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a53677a5c881946af012970ab99a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypoints: []
-  speed: 2
-  CurrentPoint: 0
 --- !u!64 &1069693529
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1693,11 +1687,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 753ea9ccf9eee6c42a0954ec8663b992, type: 2}
       propertyPath: m_MovePower
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 753ea9ccf9eee6c42a0954ec8663b992, type: 2}
       propertyPath: m_MaxAngularVelocity
-      value: 50
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 753ea9ccf9eee6c42a0954ec8663b992, type: 2}
@@ -2095,9 +2089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a53677a5c881946af012970ab99a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypoints: []
-  speed: 2
-  CurrentPoint: 0
 --- !u!64 &1875684107
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2653,9 +2644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a53677a5c881946af012970ab99a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waypoints: []
-  speed: 2
-  CurrentPoint: 0
 --- !u!64 &2070794181
 MeshCollider:
   m_ObjectHideFlags: 0
