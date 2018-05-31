@@ -49,11 +49,6 @@ namespace UnityStandardAssets.Vehicles.Ball
             {
                 other.gameObject.SetActive(false);
             }
-            if (other.gameObject.CompareTag("Speed Up"))
-            {
-                other.gameObject.SetActive(false);
-                m_MovePower = 100;
-            }
         }
     }
 }
