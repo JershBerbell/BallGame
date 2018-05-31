@@ -65,7 +65,6 @@ namespace UnityStandardAssets.Vehicles.Ball
             ball.Move(move, jump);
             jump = false;
         }
-<<<<<<< HEAD
 
 
 		void OnTriggerEnter(Collider other) 
@@ -75,8 +74,5 @@ namespace UnityStandardAssets.Vehicles.Ball
 				other.gameObject.SetActive (false);
 			}
 		}
-
-=======
->>>>>>> parent of ca40f47... Hopefully this doesnt break the thing Merge branch 'master' of https://github.com/JershBerbell/BallGame
     }
 }
