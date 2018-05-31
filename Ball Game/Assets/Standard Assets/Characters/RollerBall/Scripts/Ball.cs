@@ -43,5 +43,12 @@ namespace UnityStandardAssets.Vehicles.Ball
                 m_Rigidbody.AddForce(Vector3.up*m_JumpPower, ForceMode.Impulse);
             }
         }
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Pick Up"))
+            {
+                other.gameObject.SetActive(false);
+            }
+        }
     }
 }
