@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
+
 namespace UnityStandardAssets.Vehicles.Ball
 {
     public class Ball : MonoBehaviour
@@ -10,9 +9,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         [SerializeField] private bool m_UseTorque = true; // Whether or not to use torque to move the ball.
         [SerializeField] private float m_MaxAngularVelocity = 25; // The maximum velocity the ball can rotate at.
         [SerializeField] private float m_JumpPower = 2; // The force added to the ball when it jumps.
-        public Text countText;
-        public Text winText;
-        private int count;
+
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
 
@@ -44,28 +41,6 @@ namespace UnityStandardAssets.Vehicles.Ball
             {
                 // ... add force in upwards.
                 m_Rigidbody.AddForce(Vector3.up*m_JumpPower, ForceMode.Impulse);
-            }
-        }
-        void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.CompareTag("Pick Up"))
-            {
-                other.gameObject.SetActive(false);
-                count++;
-                SetCountText();
-            }
-            if (other.gameObject.CompareTag("Speed Up"))
-            {
-                other.gameObject.SetActive(false);
-                m_MovePower = 100;
-            }
-        }
-        void SetCountText()
-        {
-            countText.text = "Count: " + count.ToString();
-            if (count >= 12)
-            {
-                winText.text = "You Win!";
             }
         }
     }
