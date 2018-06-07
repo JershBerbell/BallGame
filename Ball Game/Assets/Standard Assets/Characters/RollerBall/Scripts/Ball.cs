@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System.Collections;
 namespace UnityStandardAssets.Vehicles.Ball
 {
@@ -59,14 +61,15 @@ namespace UnityStandardAssets.Vehicles.Ball
                 other.gameObject.SetActive(false);
                 m_MovePower += 3;
             }
+            if (other.gameObject.CompareTag("Next Level"))
+            {
+                other.gameObject.SetActive(false);
+                SceneManager.LoadScene("Level2");
+            }
         }
         void SetCountText()
         {
             countText.text = "Count: " + count.ToString();
-            if (count >= 12)
-            {
-                winText.text = "You Win!";
-            }
         }
     }
 }
