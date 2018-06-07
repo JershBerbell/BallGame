@@ -65,17 +65,5 @@ namespace UnityStandardAssets.Vehicles.Ball
             ball.Move(move, jump);
             jump = false;
         }
-<<<<<<< HEAD
-=======
-
-
-		void OnTriggerEnter(Collider other) 
-		{
-			if (other.gameObject.CompareTag ("Pick Up"))
-			{
-				other.gameObject.SetActive (false);
-			}
-		}
->>>>>>> 14dccb1b1349c532c2827a115e375070ef48d2dc
     }
 }
