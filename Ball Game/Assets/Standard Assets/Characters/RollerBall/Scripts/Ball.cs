@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         [SerializeField] private float m_MaxAngularVelocity = 25; // The maximum velocity the ball can rotate at.
         [SerializeField] private float m_JumpPower = 2; // The force added to the ball when it jumps.
         public Text countText;
-        public Text winText;
+        public GameObject winText;
         private int count;
         private const float k_GroundRayLength = 1f; // The length of the ray to check if the ball is grounded.
         private Rigidbody m_Rigidbody;
@@ -24,6 +24,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             m_Rigidbody = GetComponent<Rigidbody>();
             // Set the maximum angular velocity.
             GetComponent<Rigidbody>().maxAngularVelocity = m_MaxAngularVelocity;
+            winText.text = "";
         }
 
 
@@ -66,6 +67,12 @@ namespace UnityStandardAssets.Vehicles.Ball
                 other.gameObject.SetActive(false);
                 SceneManager.LoadScene("Level2");
             }
+            if (other.gameObject.CompareTag("Win"))
+            {
+                other.gameObject.SetActive(false);
+                winText.SetActive(true);
+            }
+
         }
         void SetCountText()
         {
