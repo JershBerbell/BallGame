@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Vehicles.Ball
             m_Rigidbody = GetComponent<Rigidbody>();
             // Set the maximum angular velocity.
             GetComponent<Rigidbody>().maxAngularVelocity = m_MaxAngularVelocity;
-            winText.text = "";
+
         }
 
 
