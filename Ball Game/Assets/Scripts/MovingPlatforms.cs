@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MovingPlatforms : MonoBehaviour
 {
-
+  
     public Transform movingPlatform;
     public Transform position1;
     public Transform position2;
@@ -15,12 +15,14 @@ public class MovingPlatforms : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+       
         ChangeTarget();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
         movingPlatform.position = Vector3.Lerp(movingPlatform.position, newPosition, smooth * Time.deltaTime);
     }
 
