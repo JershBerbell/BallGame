@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pick Up
+  - Speed Up
+  - Next Level
+  - Win
   layers:
   - Default
   - TransparentFX

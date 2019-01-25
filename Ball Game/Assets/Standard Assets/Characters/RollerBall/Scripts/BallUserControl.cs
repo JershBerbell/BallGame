@@ -40,6 +40,7 @@ namespace UnityStandardAssets.Vehicles.Ball
         {
             // Get the axis and jump input.
 
+
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
             jump = CrossPlatformInputManager.GetButton("Jump");
@@ -65,5 +66,14 @@ namespace UnityStandardAssets.Vehicles.Ball
             ball.Move(move, jump);
             jump = false;
         }
+
+
+		void OnTriggerEnter(Collider other) 
+		{
+			if (other.gameObject.CompareTag ("Pick Up"))
+			{
+				other.gameObject.SetActive (false);
+			}
+		}
     }
 }
